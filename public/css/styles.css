@@ -1,4 +1,2 @@
-img{
-    display:block;
-    max-width:100%;
-}
+@import url('general.css');
+@import url('home.css');
