@@ -29,9 +29,14 @@
     padding:1px;
 }
 
+.home header nav{
+    display:none;
+}
+
 .home header .cuotas{
     text-align: center;
     margin: 10px 0;
+    
 }
 
 .home header .cuenta{
@@ -53,7 +58,8 @@
 
 /*--MAIN--*/
 .home main{
-    margin: 0 0 20px;
+    width:90%;
+    margin: 0 auto 20px;
 }
 
 .home .producto{
@@ -68,6 +74,24 @@
     margin: 20px 0;
 }
 
+.home .poductoDetalles{
+    border-top:1px solid var(--grisClaro);
+    padding: 15px;
+}
+
+.home .envio{
+    width: 30px;
+    height: 30px;
+    border:1px solid  var(--verde);
+    border-radius:50%;
+    text-align:center;
+    line-height: 30px;;
+}
+
+.home .envio i,.home .descuento{
+    color: var(--verde);
+}
+
 .home .precio{
     font-size:18px;
 }
@@ -75,6 +99,10 @@
 .home .descuento{
     font-size:16px;
     margin: 5px 0;
+}
+
+.home .descripcion{
+    display: none;
 }
 
 /*--FOOTER--*/
@@ -101,4 +129,47 @@
 
 .home footer section h3,  .home footer section p{
     color: var(--grisOscuro);
+}
+
+/*--DISEÑO ADAPTATIVO--*/
+/*-tablet-*/
+@media (min-width: 361px){
+    /*--HEADER--*/
+    .home header nav{
+        display:block;
+    }
+    .home header .burger-menu{   
+        display:none;
+    }
+
+    /*--MAIN--*/
+    .home .producto{
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+    .home .descripcion{
+        display: block;
+    }
+
+    /*--FOOTER--*/
+}
+
+/*-desktop-*/
+@media (min-width: 769px){
+    /*--HEADER--*/
+    .home header nav{
+        display:block;
+    }
+    .home header .burger-menu{   
+        display:none;
+    }
+
+    /*--MAIN--*/
+    .home .producto{
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+    .home .descripcion{
+        display: none;
+    }
+
+    /*--FOOTER--*/
 }
