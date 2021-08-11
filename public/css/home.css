@@ -5,38 +5,53 @@
     padding:30px 20px 20px;
 }
 
+.home header .logo-busqueda{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    
+}
+
 .home header .logo{
-    width: 50%;
-    margin-bottom:20px;
+    width: 48%;
 }
 
 .home header .busqueda{
-    width: 50%;
+    width: 48%;
+    position: relative;
+}
+
+.home header .busqueda input{
+    width: 100%;
+    border-radius: 5px;
     background-color: #fff;
-    border: 1px solid var(--grisOscuro);
-    padding:1px;
-    margin-bottom:2px;
+    border: 0;
+    padding:10px; 
+    color: var(--grisOscuro);
+    position: relative; 
 }
 
-.home header .busqueda p{
-    color: var(--grisOscuro)
+.home header .busqueda i{
+    padding:8px 5px 8px 3px;
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+    display:block;
+    color: var(--grisOscuro);
+    background-color:#fff;
+    border-left: 0; 
+    border-radius:7px;
 }
 
-.home header .busqueda-icono{
-    display: inline-block;
-    background-color: var(--grisClaro);
-    border: 1px solid var(--grisOscuro);
-    padding:1px;
+.home header .cuotas{
+    width: 100%;
+    text-align: center;
+    margin: 25px 0 0;
 }
 
 .home header nav{
     display:none;
-}
-
-.home header .cuotas{
-    text-align: center;
-    margin: 10px 0;
-    
 }
 
 .home header .cuenta{
@@ -58,33 +73,57 @@
 
 /*--MAIN--*/
 .home main{
+    width:100%;
     margin: 0 auto 20px;
 }
 
-.home .producto{
-    width:90%;
-    border: 1px solid var(--grisClaro);
-    margin: 10px auto;
-    background-color: #fff;
+.home .productos{
+    width: 90%;
+    margin: 0 auto;
 }
 
-.home .ultimaVista h2, .ofertas h2{
+.home .ultimaVista,.home .ofertas{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.home .ultimaVista h2,.home .ofertas h2{
+    width: 100%;
     font-size:24px;
-    margin: 20px;
+    margin: 20px 0;
+}
+
+.home .producto{
+    width: 100%;
+    border: 1px solid var(--grisClaro);
+    margin: 10px 0;
+    background-color: #fff;
 }
 
 .home .poductoDetalles{
     border-top:1px solid var(--grisClaro);
     padding: 15px;
+    position:relative;
+}
+
+.home .precio-descuento{
+    display: flex;
+    align-items: baseline;
 }
 
 .home .envio{
+    background-color:#fff;
     width: 30px;
     height: 30px;
     border:1px solid  var(--verde);
     border-radius:50%;
     text-align:center;
-    line-height: 30px;;
+    line-height: 30px;
+    display:block;
+    position: absolute ;
+    right: 20px;
+    top: -15px;
 }
 
 .home .envio i,.home .descuento{
@@ -93,15 +132,20 @@
 
 .home .precio{
     font-size:18px;
+    flex-grow: 0.3;
 }
 
 .home .descuento{
     font-size:16px;
-    margin: 5px 0;
+    text-transform: lowercase;
+    flex-grow: 0.7;
 }
 
 .home .descripcion{
     display: none;
+    margin: 10px 0 0;
+    font-size:16px;
+
 }
 
 /*--FOOTER--*/
@@ -139,17 +183,45 @@
 /*-tablet-*/
 @media (min-width: 361px){
     /*--HEADER--*/
+    .home header .logo{width: 32%;}
+
+    .home header .busqueda{width: 32%;}
+
+    .home header .cuotas{ width: 32%; margin: 0;} 
+
     .home header nav{
         display:block;
+        margin: 30px 0 0;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
     }
+
+    .home header nav ul{
+        display:flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .home header .cuenta{
+        margin-top: 0;
+    }
+
+    .home header nav li{
+        margin: 0 5px;
+    }
+
     .home header .burger-menu{   
         display:none;
     }
 
     /*--MAIN--*/
     .home .producto{
+        width: 45%;
         box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+        margin: 0 0 25px;
     }
+
     .home .descripcion{
         display: block;
     }
@@ -157,8 +229,19 @@
 
 /*-desktop-*/
 @media (min-width: 769px){
+    /*--HEADER--*/
+    .home header nav li{
+        margin: 0 10px;
+    }
     /*--MAIN--*/
-    .home .descripcion{
-        display: none;
+    .home .producto{
+        width: 22%;
+        transition: transform .4s, box-shadow .5s; 
+        cursor:pointer;
+        }
+    
+    .home .producto:hover{
+        box-shadow : 0px 0px 30px rgb( 100 , 100 , 100 );
+        transform: scale(1.05);
     }
 }
