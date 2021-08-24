@@ -1,0 +1,111 @@
+.register main h2, .login main h2{
+    text-align: center;
+    margin: 20px;
+}
+.formulario{
+    background-color:rgba(46, 46, 46,.2);
+    width:  95%;
+    margin: 20px  auto;
+    padding:  10px;
+    border-radius: 8px;
+}
+
+.formulario .caja-formulario{
+    width: 100%;
+    margin: 15px 0;
+}
+
+.formulario .full-width input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    border:none;
+    border-bottom: 2px solid var(--grisOscuro)
+}
+
+.formulario .caja-formulario h3{
+    margin: 0 0 10px;
+}
+
+
+.formulario .perfil-usuario{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.formulario .perfil-usuario h3{
+    width:100%;
+}
+
+.formulario .perfil-usuario .radio:last-child{
+    margin: 0 0 0 30px;
+}
+
+.formulario .perfil-usuario .radio label{
+    margin: 0 0 0 5px;
+}
+
+.formulario .checkbox{
+    margin: 8px 0;
+}
+
+.formulario .checkbox label{
+    margin: 0 0 0 5px;
+}
+
+.formulario .foto-perfil input{
+    width: 98%;
+}
+
+.formulario .botones{
+    display:flex;
+    justify-content: space-between;
+    margin: 30px 0 0;
+}
+
+.register .formulario .botones .btn{
+    width: 48%;
+    padding: 10px;
+    border-radius: 5px;
+    border:none;
+    cursor:pointer;
+}
+
+.login .formulario .botones .btn{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border:none;
+    cursor:pointer;
+    margin: 0 auto;
+}
+
+.formulario .botones .btn-enviar{
+    background-color: var(--celeste);
+    color:#fff;
+}
+
+
+/*--DISEÑO ADAPTATIVO--*/
+/*-tablet-*/
+@media (min-width: 361px){
+    .formulario{
+        max-width:  460px;
+        padding:20px 30px;
+        border-radius: 8px;
+    }
+}
+
+/*-desktop-*/
+@media (min-width: 769px){
+    .formulario{
+        max-width:  460px;
+        padding:20px 30px;
+        border-radius: 8px;
+    }
+
+    .formulario .caja-formulario{
+        width: 100%;
+        margin: 20px 0;
+    }
+}
