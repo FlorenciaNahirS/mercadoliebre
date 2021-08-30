@@ -13,6 +13,7 @@
     display:flex;
     justify-content: space-between;
     flex-wrap:wrap;
+    align-items: flex-start;
 }
 
 .home .ultimaVista h2,.home .ofertas h2{
@@ -51,6 +52,13 @@
     position: absolute ;
     right: 20px;
     top: -15px;
+    transition: transform .5s;
+    transform: rotate(0deg);
+}
+
+.home .envio:hover{
+    transition: transform .5s;
+    transform: rotate(-90deg);
 }
 
 .home .envio i,.home .descuento{
@@ -69,9 +77,13 @@
 }
 
 .home .descripcion{
-    display: none;
     margin: 10px 0 0;
     font-size:16px;
+    display:none;
+}
+
+.home .producto:hover .descripcion {
+    display:block;
 }
 
 /*--DISEÑO ADAPTATIVO--*/
@@ -90,13 +102,15 @@
     }
     .home .producto{
         width: 45%;
-        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+        box-shadow:0;
         margin: 0 0 25px;
+        transition:box-shadow .5s;
     }
 
-    .home .descripcion{
-        display: block;
+    .home .producto:hover{
+        box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
     }
+
 }
 
 /*-desktop-*/
@@ -113,12 +127,6 @@
     /*--MAIN--*/
     .home .producto{
         width: 22%;
-        transition: transform .4s, box-shadow .5s; 
         cursor:pointer;
-        }
-    
-    .home .producto:hover{
-        box-shadow : 0px 0px 30px rgb( 100 , 100 , 100 );
-        transform: scale(1.05);
     }
 }

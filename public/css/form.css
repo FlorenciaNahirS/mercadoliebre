@@ -83,6 +83,12 @@
 .formulario .botones .btn-enviar{
     background-color: var(--celeste);
     color:#fff;
+    transition: background-color .5s;
+}
+
+.formulario .botones .btn-enviar:hover{
+    background-color: #0022AA;
+    color:#fff;
 }
 
 
