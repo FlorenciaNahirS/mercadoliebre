@@ -18,31 +18,28 @@ header .logo-busqueda{
     display:block;
 }
 
+/*--BUSQUEDA--*/
+
 header .busqueda{
     width: 48%;
-    position: relative;
+    display:flex
 }
 
  header .busqueda input{
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     background-color: #fff;
     border: 0;
     padding:10px; 
     color: var(--grisOscuro);
-    position: relative; 
 }
 
-header .busqueda i{
-    padding:8px 5px 8px 3px;
-    position: absolute;
-    right: 0; 
-    bottom: 0;
-    display:block;
+header .busqueda button{
+    border-radius:0 5px 5px 0;
     color: var(--grisOscuro);
-    background-color:#fff;
-    border-left: 0; 
-    border-radius:7px;
+    border: 0;
+    padding: 0 5px;
+    cursor:pointer;
 }
 
 header .cuotas{
@@ -114,5 +111,8 @@ header .burger-menu i{
     /*--HEADER--*/
     header nav li{
         margin: 0 10px;
+    }
+    header .busqueda button{
+        padding: 0 20px;
     }
 }
